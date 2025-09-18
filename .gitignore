@@ -1,0 +1,48 @@
+# Compiled object files
+*.o
+
+# Compiled binary executables
+*.exe
+*.out
+*.elf
+
+# Precompiled Headers
+*.gch
+
+# Debug files
+*.dSYM/
+*.pdb
+*.ilk
+*.obj
+
+# Visual Studio specific
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Code::Blocks specific
+*.depend
+*.layout
+
+# CMake build directories
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Backup files
+*~
+*.bak
+*.swp
+*.tmp
+
+# Logs
+*.log
+
+# Other
+tags
+.DS_Store
+Thumbs.db
