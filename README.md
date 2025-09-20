@@ -160,8 +160,29 @@ Value	x	i	n	\0	(empty/unused)
 sprintf() --> print formatted data to a string (instead of console), stores result in a char array
 
 For loops:
+Code block run multiple time, need iteration variable
+initialize iteration variable using initial value,  check condition if iterator reached the final/limit value,  update iteration variable (increment/decrement)
+
 Operator	Effect	Typical Use Case
 i++	Increase by 1	Standard loop from 0…n
 ++i	Pre-increment (increase before use)	Rarely matters in for loop
 i += n	Increase by n	Step through array every n items
 i = i+n	Same as i += n	Explicit, same effect
+
+20/09/2025:
+
+While Loop:
+Code block run multiple time, need condition to check if it should continue looping
+Less funcional than for loop, but more flexible
+
+infinite loop --> while(1) or while(TRUE)
+
+Loop directives:
+
+break--> exit the loop immediately, even if condition is still true
+continue--> skip the rest of the current iteration and move to the next iteration
+
+Function:
+A block of code that performs a specific task, can be reused multiple times in a program.
+Function receive either fixed value or variable as input, process it and return the result
+Can only return one value, or no value (void)
