@@ -186,3 +186,21 @@ Function:
 A block of code that performs a specific task, can be reused multiple times in a program.
 Function receive either fixed value or variable as input, process it and return the result
 Can only return one value, or no value (void)
+
+Static:
+keyword to define a variable or function with internal linkage
+By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
+
+Local static variable (local scope-->inside function)-->lifetime of the variable is the entire program execution, but its scope is limited to the block in which it is defined. It retains its value between function calls.
+Initialization once only
+Static inside a function → keeps its value between calls.
+Static outside a function → variable is only visible within the file it is defined in (internal linkage).
+
+Static Function (By default function is global, but by adding static keyword, it becomes internal linkage) --> function is only visible within the file it is defined in (internal linkage).)
+
+static void fun(void) {
+   printf("I am a static function.");
+}
+
+Static vs Global?
+While static variables have scope over the file containing them making them accessible only inside a given file, global variables can be accessed outside the file too.
