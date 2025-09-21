@@ -1,8 +1,8 @@
-﻿RANDOM NOTES:
+﻿# RANDOM NOTES:
 
-18/09/2024
+## 18/09/2024
 
-Data Type
+### Data Type
 
 Integer (Signed) --> basically number that can be positive or negative
 
@@ -45,12 +45,12 @@ formatting:
 %d = int
 %f = float & double
 
-console:
+### console:
 
 printf → prints (writes) data to the console.
 scanf → scans (reads) data from the console (standard input).
 
-Array:
+### Array:
 
 define the variable first by showing how many items inside it
 
@@ -66,7 +66,7 @@ value inline:
 
 int myArray[3] = {34, 46, 87};
 
-Logic:
+### Logic:
 ex
 
 #include <stdio.h>;
@@ -88,9 +88,9 @@ matcher:
 >=
 ==
 
-19/09/2024
+## 19/09/2024
 
-String:
+### String:
 Array of characters
 
 Defining string
@@ -105,12 +105,12 @@ char name[] = "Xin";
 the same as
 char name[4] = {'X', 'i', 'n', '\0'};] // Adding null terminator, \0 marked the ending of a string array
 
-formatting:
+### formatting:
 
 %s --> strings (whole array)
 %c --> single data in the array
 
-string function:
+### string function:
 #include <string.h> // library for string function
 strlen() --> count the length of the string (not including null terminator)
 strncmp() --> compare two strings (case sensitive) --> even new line (\n) is different
@@ -118,7 +118,7 @@ strncat() --> concatenate two strings
 
 Array size (memory):
 
-Multi-dimensional arrays
+### Multi-dimensional arrays
 
 Example:
 
@@ -143,7 +143,7 @@ sizeof(grades) tells you total memory (2×5×size_of_int).
 sizeof(grades[0]) tells you size of one row (5×size_of_int).
 sizeof(grades[0][0]) tells you size of one element (size_of_int).
 
-Strings:
+### Strings:
 
 char dest[20] = "Hello, ";
 
@@ -159,7 +159,7 @@ Value	x	i	n	\0	(empty/unused)
 
 sprintf() --> print formatted data to a string (instead of console), stores result in a char array
 
-For loops:
+### For loops:
 Code block run multiple time, need iteration variable
 initialize iteration variable using initial value,  check condition if iterator reached the final/limit value,  update iteration variable (increment/decrement)
 
@@ -169,25 +169,25 @@ i++	Increase by 1	Standard loop from 0…n
 i += n	Increase by n	Step through array every n items
 i = i+n	Same as i += n	Explicit, same effect
 
-20/09/2025:
+## 20/09/2025:
 
-While Loop:
+### While Loop:
 Code block run multiple time, need condition to check if it should continue looping
 Less funcional than for loop, but more flexible
 
 infinite loop --> while(1) or while(TRUE)
 
-Loop directives:
+### Loop directives:
 
 break--> exit the loop immediately, even if condition is still true
 continue--> skip the rest of the current iteration and move to the next iteration
 
-Function:
+### Function:
 A block of code that performs a specific task, can be reused multiple times in a program.
 Function receive either fixed value or variable as input, process it and return the result
 Can only return one value, or no value (void)
 
-Static:
+### Static:
 keyword to define a variable or function with internal linkage
 By default, variables are local to the scope in which they are defined. Variables can be declared as static to increase their scope up to file containing them. As a result, these variables can be accessed anywhere inside a file.
 
@@ -204,3 +204,38 @@ static void fun(void) {
 
 Static vs Global?
 While static variables have scope over the file containing them making them accessible only inside a given file, global variables can be accessed outside the file too.
+
+## 21/09/2025:
+
+### Pointer:
+Pointers are also variables and play a very important role in C programming language. They are used for several reasons, such as:
+Strings
+Dynamic memory allocation
+Sending function arguments by reference
+Building complicated data structures
+Pointing to functions
+Building special data structures (i.e. Tree, Tries, etc...)
+
+A pointer is essentially a simple integer variable which holds a memory address that points to a value, instead of holding the actual value itself.
+
+Strings as pointers-->C-Strings
+char * name = "John";
+does three things:
+
+It allocates a local (stack) variable called name, which is a pointer to a single character.
+It causes the string "John" to appear somewhere in the program memory (after it is compiled and executed, of course).
+It initializes the name argument to point to where the J character resides at (which is followed by the rest of the string in the memory).
+
+Deferencing:
+Act of referencing a pointer to access the value it points to.
+
+ The brackets operator - [0] for example, accesses the first item of the array. And since arrays are actually pointers, accessing the first item in the array is the same as dereferencing a pointer. Dereferencing a pointer is done using the asterisk operator *.
+
+ /* define a local variable a */
+int a = 1;
+
+/* define a pointer variable, and point it to a using the & operator */
+int * pointer_to_a = &a;
+
+printf("The value a is %d\n", a);
+printf("The value of a is also %d\n", *pointer_to_a);
